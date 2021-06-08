@@ -1,22 +1,12 @@
+import { addRideTicket } from "./rides/RideTicketHolders.js"
+import { addGameTicket } from "./games/gameTicketHolders.js"
+import { addFoodTicket } from "./food/foodTicketHolders.js"
+import { addSideshowTicket } from "./sideshows/sideShowTicketHolders.js"
+
 
 const contentTarget = document.querySelector(".entry")
 const eventHub = document.querySelector("#state-fair")
 
-const addRideTicket = () => {
-    console.log("Ride Ticket was clicked")
-}
-const addFoodTicket = () => {
-    console.log("Food Ticket was clicked")
-}
-const addGameTicket = () => {
-    console.log("Game Ticket was clicked")
-}
-const addSideshowTicket = () => {
-    console.log("Sideshow Ticket was clicked")
-}
-const addFullPackageTicket = () => {
-    console.log("Full Package Ticket was clicked")
-}
 
 eventHub.addEventListener("click", (event) => {
     if (event.target.id === "rideTicket") {
