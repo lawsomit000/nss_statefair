@@ -1,9 +1,23 @@
-const contentTarget = document.querySelector(".rides")
-// const eventHub = document.querySelector("#state-fair")
-const divAdd = document.createElement('div')
 
-export const addRideTicket = () => {
-    // divAdd.appendChild(contentTarget)
-    contentTarget.classList.add('person', 'rider')
+// const eventHub = document.querySelector("#state-fair")
+// document.getElementsByClassName('people food')
+// const contentTarget = document.querySelector(".rides")
+// const contentTarget = document.querySelector('.rides')
+
+const addRideTicket = () => {
+   return `<li class= "person rider">
+    </li>`
 }
-// been trying appendChild but have not had it work yet. Going to keep trying down this path tomorrow. 
+
+export const ticketSales = () => {
+    const sales = addRideTicket()
+
+    let html = "<ul>"
+
+    const listItems = sales.map(addRideTicket)
+
+    html += listItems.join("")
+    html += "</ul>"
+
+    return html 
+}
